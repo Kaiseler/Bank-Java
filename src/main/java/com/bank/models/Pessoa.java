@@ -60,9 +60,9 @@ public abstract class Pessoa {
     @Override
     public String toString() {
         return  "Nome: " + this.name +
-                "NIF: " + this.nif +
-                "Telefone: " + this.telefone +
-                "Morada: " + this.telefone;
+                " NIF: " + this.nif +
+                " Telefone: " + this.telefone +
+                " Morada: " + this.telefone;
 
 
     }

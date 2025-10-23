@@ -1,5 +1,7 @@
 package com.bank.models;
 
+
+
 public class Funcionario extends Pessoa {
     private String matricula;
     private String cargo;
@@ -32,5 +34,25 @@ public class Funcionario extends Pessoa {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Cliente)) {
+            return false;
+        }
+        if (this == obj) {
+            return true;
+        }
+        Cliente c = (Cliente) obj;
+
+        if(this.getName().equals(c.getName()) && this.getNif() == c.getNif()) {
+            return true;
+        }
+
+        return false;
     }
 }

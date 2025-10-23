@@ -26,4 +26,24 @@ public class Cliente extends Pessoa {
     public void setDataCadastro(Date dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Cliente)) {
+            return false;
+        }
+        if (this == obj) {
+            return true;
+        }
+        Cliente c = (Cliente) obj;
+
+        if(this.getName().equals(c.getName()) && this.getNif() == c.getNif()) {
+            return true;
+        }
+
+        return false;
+    }
 }
