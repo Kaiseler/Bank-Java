@@ -1,8 +1,8 @@
-package com.bank.repository;
+package com.bank.repository.impl;
 
 import com.bank.models.Funcionario;
 
-public class FuncionarioDAO {
+public class FuncionarioDAOImpl {
 
     private static Funcionario[] funcionarios = new Funcionario[100];
 

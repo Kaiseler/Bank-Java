@@ -1,8 +1,8 @@
 package com.bank.study;
 
 import com.bank.models.Cliente;
-import com.bank.repository.ClienteDAO;
-import com.bank.repository.FuncionarioDAO;
+import com.bank.repository.impl.ClienteDAOImpl;
+import com.bank.repository.impl.FuncionarioDAOImpl;
 import com.bank.models.Funcionario;
 
 public class Teste {
@@ -11,7 +11,7 @@ public class Teste {
 
         Funcionario func1 = new Funcionario("Luis", "12");
         Funcionario func2 = new Funcionario("Armindo", "32");
-        FuncionarioDAO teste = new FuncionarioDAO();
+        FuncionarioDAOImpl teste = new FuncionarioDAOImpl();
 
 
         teste.adicionaFuncionario(func1);
