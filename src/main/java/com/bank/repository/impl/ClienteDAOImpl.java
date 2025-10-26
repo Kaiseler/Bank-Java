@@ -34,11 +34,6 @@ public class ClienteDAOImpl implements ClienteDAO {
         totalClientes++;
     }
 
-    /**
-     * Procura um cliente pelo atributo nif. percorre o array ate a variavel totalClientes.
-     * @param nif a String a ser procurada nos objectos de tipo Cliente
-     * @return o objecto Cliente correspondente ao nif, ou null se não for encontrada.
-     */
 
     public Cliente get(String nif) {
 
@@ -54,8 +49,8 @@ public class ClienteDAOImpl implements ClienteDAO {
 
     /**
      * Remove um cliente pelo atributo nif. Percorre o array até totalClientes,
-     * e se encontrar o cliente, remove-o e reorganiza o array movendo os elementos
-     * seguintes uma posição para trás. Decrementa totalClientes.
+     * e se encontrar o cliente, substitui-o pelo último elemento do array e
+     * decrementa totalClientes.
      *
      * @param nif a String a ser procurada nos objectos do tipo Cliente
      * @return true se o cliente foi removido, false se não foi encontrado

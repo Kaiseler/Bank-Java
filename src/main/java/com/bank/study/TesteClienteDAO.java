@@ -2,7 +2,6 @@ package com.bank.study;
 import com.bank.repository.impl.ClienteDAOImpl;
 import com.bank.models.Cliente;
 
-import java.sql.SQLOutput;
 import java.util.List;
 
 public class TesteClienteDAO {
