@@ -2,9 +2,9 @@ package com.bank.models;
 
 public abstract class Conta {
 
-    Conta[] contas = new Conta[100];
 
-    private static int totalContas;
+
+
 
     private String nif;
     private String numeroConta;
@@ -16,7 +16,7 @@ public abstract class Conta {
         this.nif = nif;
         this.numeroConta = numeroConta;
         this.saldo = saldo;
-        totalContas++;
+
     }
 
 
@@ -44,6 +44,8 @@ public abstract class Conta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+
+    public abstract TipoConta getTipoConta();
 
     @Override
     public String toString(){

@@ -109,8 +109,6 @@ public class ClienteDAOImpl implements ClienteDAO {
         return allClients;
     }
 
-    private int size() {
-        return totalClientes;
-    }
+
 
 }
