@@ -52,6 +52,6 @@ public abstract class Conta {
         return  "Dados da conta: " +
                 "\nNIF: " + this.nif +
                 "\nNumero de Conta: " + this.numeroConta +
-                "\nSaldo" + this.saldo;
+                "\nSaldo: " + this.saldo;
     }
 }
