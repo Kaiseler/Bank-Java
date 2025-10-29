@@ -33,10 +33,9 @@ public class ContaOrdemDAOImpl implements ContaOrdemDAO {
     }
 
     /**
-     * Procura uma conta a ordem pelo atributo numeroConta.
+     * Procura uma conta a ordem pelo atributo numeroConta e remove a mesma.
      * @param numeroConta a String a ser procurada nos objectos do tipo ContaOrdem
-     * @return o objecto ContaOrdem correspondente ao numeroConta, ou false se
-     * o objecto não existir!
+     * @return true se objeto for removido, false senão existir.
      */
     public boolean remove(String numeroConta) {
 
