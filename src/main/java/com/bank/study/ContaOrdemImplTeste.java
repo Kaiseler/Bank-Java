@@ -1,8 +1,6 @@
 package com.bank.study;
 
 import com.bank.models.ContaOrdem;
-import com.bank.repository.impl.ContaOrdemDAOImpl;
-
 
 
 public class ContaOrdemImplTeste {

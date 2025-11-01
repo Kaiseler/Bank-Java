@@ -1,23 +1,25 @@
 package com.bank.repository.impl;
 
+import com.bank.models.Conta;
 import com.bank.models.ContaPoupanca;
-import com.bank.repository.ContaPoupancaDAO;
+import com.bank.repository.ContaDAO;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class ContaPoupancaDAOImpl implements ContaPoupancaDAO {
+public class ContaDAOImpl implements ContaDAO {
 
-    private HashMap<String, ContaPoupanca> contasPoupanca = new HashMap<>();
+    private static Map<String, Conta> contasDB = new HashMap<>();
 
 
     /**
-     * Adiciona uma ContaPoupanca ao HashMap contasPoupanca.
+     * Adiciona uma ContaPoupanca ao HashMap contasDB.
      * @param conta o objeto ContaPoupanca a ser adicionado.
      */
-    public void add(ContaPoupanca conta) {
-        contasPoupanca.put(conta.getNumeroConta(), conta);
+    public void add(Conta conta) {
+        contasDB.put(conta.getNumeroConta(), conta);
     }
 
     /**
@@ -25,8 +27,8 @@ public class ContaPoupancaDAOImpl implements ContaPoupancaDAO {
      * @param numeroConta a String a ser procurada nos objetos do tipo ContaPoupanca.
      * @return o objeto ContaPoupanca que corresponde ao numero de conta, ou null senao existir.
      */
-    public ContaPoupanca get(String numeroConta) {
-        return contasPoupanca.get(numeroConta);
+    public Conta get(String numeroConta) {
+        return contasDB.get(numeroConta);
     }
 
     /**
@@ -36,7 +38,7 @@ public class ContaPoupancaDAOImpl implements ContaPoupancaDAO {
      */
     public boolean remove(String numeroConta) {
 
-        ContaPoupanca resultado = contasPoupanca.remove(numeroConta);
+        Conta resultado = contasDB.remove(numeroConta);
 
         if (resultado != null) {
             return true;
@@ -50,10 +52,10 @@ public class ContaPoupancaDAOImpl implements ContaPoupancaDAO {
      * @param numeroConta a String a ser procurada.
      * @return true se a ContaPoupanca foi atualizada, false senao foi encontrada.
      */
-    public boolean update(ContaPoupanca contaNova, String numeroConta) {
+    public boolean update(Conta contaNova, String numeroConta) {
 
-        if (contasPoupanca.containsKey(numeroConta)){
-            contasPoupanca.put(numeroConta, contaNova);
+        if (contasDB.containsKey(numeroConta)){
+            contasDB.put(numeroConta, contaNova);
             return true;
         }
         return false;
@@ -64,7 +66,7 @@ public class ContaPoupancaDAOImpl implements ContaPoupancaDAO {
      * o metodo retorna todos os valores das keys em contasPoupanca.
      * @return um ArrayList com os objetos ContaOrdem dentro de contasPoupanca.
      */
-    public List<ContaPoupanca> getAll() {
-        return new ArrayList<>(contasPoupanca.values());
+    public List<Conta> getAll() {
+        return new ArrayList<>(contasDB.values());
     }
 }

@@ -35,7 +35,7 @@ public class ClienteDAOImpl implements ClienteDAO {
     }
 
 
-    public Cliente get(String nif) {
+    public Cliente get(String nif)  {
 
         for (int i = 0; i < totalClientes; i++) {
             if (clientes[i].getNif().equals(nif)) {

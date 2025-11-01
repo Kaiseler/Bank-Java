@@ -1,7 +1,7 @@
 package com.bank.study;
 
 import com.bank.models.ContaPoupanca;
-import com.bank.repository.impl.ContaPoupancaDAOImpl;
+import com.bank.repository.impl.ContaDAOImpl;
 
 public class ContaPoupancaImplTeste {
 
@@ -11,7 +11,7 @@ public class ContaPoupancaImplTeste {
         ContaPoupanca contaP3 = new ContaPoupanca("457", "456", 900.00, 12000.00);
         ContaPoupanca contaP4 = new ContaPoupanca("2346", "1254", 12000.00, 14000.00);
 
-        ContaPoupancaDAOImpl contas = new ContaPoupancaDAOImpl();
+        ContaDAOImpl contas = new ContaDAOImpl();
 
         System.out.println("--- Metodo add() Teste ---");
         contas.add(contaP);
